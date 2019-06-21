@@ -1,0 +1,19 @@
+<view class="free-panel-title">纯css3瀑布流布局 ( 利用css3的column-＊属性 )</view>
+    <view class="free-WaterfallFlow">
+      <block>
+        <view class="flex-wrap" wx:for="{{images}}" wx:key='{{item.src}}' 
+        wx:if="{{item.id%2!=''}}">
+          <image mode="widthFix" src="{{item.src}}"></image>
+          <view>{{item.name}}</view>
+          <view>{{item.data}}</view>
+        </view>
+      </block>
+      <block>
+        <view class="flex-wrap" wx:for="{{images}}" wx:key='{{item.src}}'
+        wx:if="{{item.id%2==''}}">
+          <image mode="widthFix" src="{{item.src}}"></image>
+          <view>{{item.name}}</view>
+          <view>{{item.data}}</view>
+        </view>
+      </block>
+    </view>
